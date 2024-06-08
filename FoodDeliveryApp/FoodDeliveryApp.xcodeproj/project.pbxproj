@@ -23,6 +23,7 @@
 		27BFD97B2C12F2FA00A207E1 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD97A2C12F2FA00A207E1 /* UIFont+Extension.swift */; };
 		27BFD97D2C13190900A207E1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD97C2C13190900A207E1 /* UIColor+Extension.swift */; };
 		27BFD97F2C13196A00A207E1 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD97E2C13196A00A207E1 /* AppColors.swift */; };
+		27BFD9842C1430C100A207E1 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD9832C1430C100A207E1 /* Coordinator.swift */; };
 		27DC8E302C0A1F24008F5B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E2F2C0A1F24008F5B76 /* AppDelegate.swift */; };
 		27DC8E322C0A1F24008F5B76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E312C0A1F24008F5B76 /* SceneDelegate.swift */; };
 		27DC8E342C0A1F24008F5B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E332C0A1F24008F5B76 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		27BFD97A2C12F2FA00A207E1 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 		27BFD97C2C13190900A207E1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		27BFD97E2C13196A00A207E1 /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
+		27BFD9832C1430C100A207E1 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		27DC8E2C2C0A1F24008F5B76 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DC8E2F2C0A1F24008F5B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27DC8E312C0A1F24008F5B76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,30 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		27BFD9802C14304100A207E1 /* NavigationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				27BFD9822C14308E00A207E1 /* Coordinators */,
+				27BFD9812C14307900A207E1 /* Controllers */,
+			);
+			path = NavigationLayer;
+			sourceTree = "<group>";
+		};
+		27BFD9812C14307900A207E1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		27BFD9822C14308E00A207E1 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				27BFD9832C1430C100A207E1 /* Coordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		27DC8E232C0A1F24008F5B76 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +159,7 @@
 		27DC8E2E2C0A1F24008F5B76 /* FoodDeliveryApp */ = {
 			isa = PBXGroup;
 			children = (
+				27BFD9802C14304100A207E1 /* NavigationLayer */,
 				27BFD95C2C1237CE00A207E1 /* Resources */,
 				27DC8E2F2C0A1F24008F5B76 /* AppDelegate.swift */,
 				27DC8E312C0A1F24008F5B76 /* SceneDelegate.swift */,
@@ -232,6 +259,7 @@
 				27BFD97B2C12F2FA00A207E1 /* UIFont+Extension.swift in Sources */,
 				27BFD97F2C13196A00A207E1 /* AppColors.swift in Sources */,
 				27DC8E322C0A1F24008F5B76 /* SceneDelegate.swift in Sources */,
+				27BFD9842C1430C100A207E1 /* Coordinator.swift in Sources */,
 				27BFD97D2C13190900A207E1 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
