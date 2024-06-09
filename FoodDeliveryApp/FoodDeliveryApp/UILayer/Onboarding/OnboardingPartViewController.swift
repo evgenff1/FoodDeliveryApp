@@ -27,11 +27,14 @@ class OnboardingPartViewController: UIViewController {
             descriptionLabel.text = descriptionText
         }
     }
+    var buttonText: String?
+    
 
     // MARK: - Views
     private let imageView = UIImageView()
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
+    private let bottomButton = UIButton()
 
 
 
@@ -84,7 +87,7 @@ private extension OnboardingPartViewController {
         descriptionLabel.textColor = AppColors.white
         descriptionLabel.numberOfLines = 0
         descriptionLabel.textAlignment = .center
-
+        
         NSLayoutConstraint.activate([
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 23),
             descriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
