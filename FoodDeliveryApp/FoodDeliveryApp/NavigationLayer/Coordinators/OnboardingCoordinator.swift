@@ -15,12 +15,14 @@ class OnboardingCoordinator: Coordinator {
     
     override func finish() {
         print("OnboardingCoordinator finish")
+        finishDelegate?.coordinatorDidFinish(childCoordinator: self)
     }
 }
 
 private extension OnboardingCoordinator {
     func showOnboarding() {
         var pages = [OnboardingPartViewController]()
+        
         let firstVC = OnboardingPartViewController()
         firstVC.imageToShow = UIImage(resource: .chickenLeg)
         firstVC.titleText = "Delicious Food"
