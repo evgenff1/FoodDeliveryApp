@@ -35,6 +35,7 @@
 		27BFD9982C14C52600A207E1 /* OnboardingViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD9972C14C52600A207E1 /* OnboardingViewPresenter.swift */; };
 		27BFD99A2C14E29D00A207E1 /* OnboardingPartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD9992C14E29D00A207E1 /* OnboardingPartViewController.swift */; };
 		27BFD99D2C15DF2A00A207E1 /* UserStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD99C2C15DF2A00A207E1 /* UserStorage.swift */; };
+		27BFD9A12C1863DC00A207E1 /* SceneFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD9A02C1863DC00A207E1 /* SceneFactory.swift */; };
 		27DC8E302C0A1F24008F5B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E2F2C0A1F24008F5B76 /* AppDelegate.swift */; };
 		27DC8E322C0A1F24008F5B76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E312C0A1F24008F5B76 /* SceneDelegate.swift */; };
 		27DC8E342C0A1F24008F5B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E332C0A1F24008F5B76 /* ViewController.swift */; };
@@ -71,6 +72,7 @@
 		27BFD9972C14C52600A207E1 /* OnboardingViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewPresenter.swift; sourceTree = "<group>"; };
 		27BFD9992C14E29D00A207E1 /* OnboardingPartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingPartViewController.swift; sourceTree = "<group>"; };
 		27BFD99C2C15DF2A00A207E1 /* UserStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStorage.swift; sourceTree = "<group>"; };
+		27BFD9A02C1863DC00A207E1 /* SceneFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneFactory.swift; sourceTree = "<group>"; };
 		27DC8E2C2C0A1F24008F5B76 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DC8E2F2C0A1F24008F5B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27DC8E312C0A1F24008F5B76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 		27BFD9932C14BEBC00A207E1 /* UILayer */ = {
 			isa = PBXGroup;
 			children = (
+				27BFD99F2C18634200A207E1 /* SceneFactory */,
 				27BFD9942C14C40E00A207E1 /* Onboarding */,
 			);
 			path = UILayer;
@@ -193,6 +196,14 @@
 				27BFD99C2C15DF2A00A207E1 /* UserStorage.swift */,
 			);
 			path = ServicesLayer;
+			sourceTree = "<group>";
+		};
+		27BFD99F2C18634200A207E1 /* SceneFactory */ = {
+			isa = PBXGroup;
+			children = (
+				27BFD9A02C1863DC00A207E1 /* SceneFactory.swift */,
+			);
+			path = SceneFactory;
 			sourceTree = "<group>";
 		};
 		27DC8E232C0A1F24008F5B76 = {
@@ -326,6 +337,7 @@
 				27BFD9922C14806A00A207E1 /* TabBarController.swift in Sources */,
 				27BFD99A2C14E29D00A207E1 /* OnboardingPartViewController.swift in Sources */,
 				27BFD99D2C15DF2A00A207E1 /* UserStorage.swift in Sources */,
+				27BFD9A12C1863DC00A207E1 /* SceneFactory.swift in Sources */,
 				27BFD9842C1430C100A207E1 /* Coordinator.swift in Sources */,
 				27BFD9982C14C52600A207E1 /* OnboardingViewPresenter.swift in Sources */,
 				27BFD97D2C13190900A207E1 /* UIColor+Extension.swift in Sources */,
