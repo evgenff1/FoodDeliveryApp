@@ -14,12 +14,8 @@ enum LoginViewState {
 }
 
 protocol LoginViewInput: AnyObject {
-    func onSignInTapped()
-    func onSignUpTapped()
-    func onFacebookTapped()
-    func onGoogleTapped()
-    func onForgotTapped()
-    func onBackPressed()
+    func startLoader()
+    func stopLoader()
 }
 
 class LoginViewController: UIViewController {
@@ -43,6 +39,8 @@ class LoginViewController: UIViewController {
     private lazy var signInButton = FDButton()
     private lazy var signUpButton = FDButton()
     private lazy var verticalStack = UIStackView()
+    private lazy var loader = UIActivityIndicatorView(style: .large)
+    private lazy var loaderContainer = UIView()
     
     // MARK: - Constraints
     private var stackViewBottomCT = NSLayoutConstraint()
@@ -106,6 +104,7 @@ private extension LoginViewController {
             setupForgotLabel()
             setupNavigationBar()
         }
+        setupLoaderView()
 
     }
     func setupNavigationBar() {
@@ -316,48 +315,25 @@ private extension LoginViewController {
             signUpReEnterPass.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
-}
-
-// MARK: - LoginViewInput delegate
-extension LoginViewController: LoginViewInput {
-    func onBackPressed() {
+    func setupLoaderView() {
+        view.addSubview(loaderContainer)
+        loaderContainer.translatesAutoresizingMaskIntoConstraints = false
+        loaderContainer.backgroundColor = AppColors.black.withAlphaComponent(0.3)
+        loaderContainer.isHidden = true
         
-    }
-    
-    func onSignInTapped() {
-        switch state {
-        case .initial:
-            viewOutput.goToSignIn()
-        case .signIn:
-            return
-        case .signUp:
-            return
-        }
-    }
-    
-    func onSignUpTapped() {
-        switch state {
-        case .initial:
-            viewOutput.goToSignUp()
-        case .signIn:
-            return
-        case .signUp:
-            return
-        }
-    }
-    
-    func onFacebookTapped() {
+        NSLayoutConstraint.activate([
+            loaderContainer.widthAnchor.constraint(equalTo: view.widthAnchor),
+            loaderContainer.heightAnchor.constraint(equalTo: view.heightAnchor)
+        ])
         
-    }
-    
-    func onGoogleTapped() {
+        loader.translatesAutoresizingMaskIntoConstraints = false
+        loaderContainer.addSubview(loader)
         
+        NSLayoutConstraint.activate([
+            loader.centerXAnchor.constraint(equalTo: loaderContainer.centerXAnchor),
+            loader.centerYAnchor.constraint(equalTo: loaderContainer.centerYAnchor)
+        ])
     }
-    
-    func onForgotTapped() {
-        
-    }
-    
 }
 
 //MARK: - Keyboard Observers
@@ -399,6 +375,61 @@ private extension LoginViewController {
            }
        }
    }
+}
+
+// MARK: - Private methods
+private extension LoginViewController {
+    func onBackPressed() {
+        
+    }
+    
+    func onSignInTapped() {
+        switch state {
+        case .initial:
+            viewOutput.goToSignIn()
+        case .signIn:
+            print(#function)
+            viewOutput.loginStart(login: signInUsername.text ?? "", password: signInPassword.text ?? "")
+        case .signUp:
+            return
+        }
+    }
+    
+    func onSignUpTapped() {
+        switch state {
+        case .initial:
+            viewOutput.goToSignUp()
+        case .signIn:
+            return
+        case .signUp:
+            return
+        }
+    }
+    
+    func onFacebookTapped() {
+        
+    }
+    
+    func onGoogleTapped() {
+        
+    }
+    
+    func onForgotTapped() {
+        
+    }
+}
+
+// MARK: - LoginViewInput delegate
+extension LoginViewController: LoginViewInput {
+    func startLoader() {
+        loaderContainer.isHidden = false
+        loader.startAnimating()
+    }
+
+    func stopLoader() {
+        loaderContainer.isHidden = true
+        loader.stopAnimating()
+    }
 }
 
 //#Preview("LoginVC") {
