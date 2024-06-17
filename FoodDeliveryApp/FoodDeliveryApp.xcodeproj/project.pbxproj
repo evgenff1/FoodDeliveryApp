@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2785F4602C20136F00CDFFE9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F45F2C20136F00CDFFE9 /* LoginCoordinator.swift */; };
 		27BFD96C2C12F0EB00A207E1 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27BFD95F2C12F0EB00A207E1 /* Roboto-Medium.ttf */; };
 		27BFD96D2C12F0EB00A207E1 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27BFD9602C12F0EB00A207E1 /* Roboto-Light.ttf */; };
 		27BFD96E2C12F0EB00A207E1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27BFD9612C12F0EB00A207E1 /* Roboto-Regular.ttf */; };
@@ -49,6 +50,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2785F45F2C20136F00CDFFE9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		27BFD95F2C12F0EB00A207E1 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		27BFD9602C12F0EB00A207E1 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		27BFD9612C12F0EB00A207E1 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				27BFD9832C1430C100A207E1 /* Coordinator.swift */,
 				27BFD9852C14357B00A207E1 /* AppCoordinator.swift */,
 				27BFD9872C14366500A207E1 /* OnboardingCoordinator.swift */,
+				2785F45F2C20136F00CDFFE9 /* LoginCoordinator.swift */,
 				27BFD9892C1453E700A207E1 /* HomeCoordinator.swift */,
 				27BFD98B2C14541F00A207E1 /* OrderCoordinator.swift */,
 				27BFD98D2C14549400A207E1 /* ListCoordinator.swift */,
@@ -410,6 +413,7 @@
 				27BFD98A2C1453E700A207E1 /* HomeCoordinator.swift in Sources */,
 				27BFD9922C14806A00A207E1 /* TabBarController.swift in Sources */,
 				27BFD99A2C14E29D00A207E1 /* OnboardingPartViewController.swift in Sources */,
+				2785F4602C20136F00CDFFE9 /* LoginCoordinator.swift in Sources */,
 				27BFD99D2C15DF2A00A207E1 /* UserStorage.swift in Sources */,
 				27BFD9A12C1863DC00A207E1 /* SceneFactory.swift in Sources */,
 				27BFD9842C1430C100A207E1 /* Coordinator.swift in Sources */,

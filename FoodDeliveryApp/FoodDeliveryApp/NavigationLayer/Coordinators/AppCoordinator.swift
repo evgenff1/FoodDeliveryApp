@@ -30,7 +30,8 @@ class AppCoordinator: Coordinator {
 private extension AppCoordinator {
     func showOnboardingFlow() {
         guard let navigationController = navigationController else { return }
-        factory.makeOnboardingFlow(coordinator: self, finishDelegate: self, navigationController: navigationController)
+        let onboardingCoordinator = factory.makeOnboardingFlow(coordinator: self, finishDelegate: self, navigationController: navigationController)
+        onboardingCoordinator.start()
         
     }
     func showMainFlow() {
@@ -41,25 +42,8 @@ private extension AppCoordinator {
     }
     func showAuthFlow() {
         guard let navigationController = navigationController else { return }
-        let vc = factory.makeAuthScene(coordinator: self)
-        navigationController.pushViewController(vc, animated: true)
-    }
-}
-
-// MARK: - Methods
-extension AppCoordinator {
-    func showSignInScene() {
-        guard let navigationController = navigationController else { return }
-        let vc = factory.makeSignInScene(coordinator: self)
-        navigationController.pushViewController(vc, animated: true)
-    }
-    func showSignUpScene() {
-        guard let navigationController = navigationController else { return }
-        let vc = factory.makeSignUpScene(coordinator: self)
-        navigationController.pushViewController(vc, animated: true)
-    }
-    func showMainScene() {
-        showMainFlow()
+        let loginCoordinator = factory.makeLoginFlow(coordinator: self, finishDelegate: self, navigationController: navigationController)
+        loginCoordinator.start()
     }
 }
 
@@ -70,8 +54,11 @@ extension AppCoordinator: CoordinatorFinishDelegate {
         
         switch childCoordinator.type {
         case .onboarding:
-            navigationController?.viewControllers.removeAll()
             showAuthFlow()
+            navigationController?.viewControllers = [navigationController?.viewControllers.last ?? UIViewController()]
+        case .login:
+            showMainFlow()
+            navigationController?.viewControllers = [navigationController?.viewControllers.last ?? UIViewController()]
         case .app:
             return
         default:
