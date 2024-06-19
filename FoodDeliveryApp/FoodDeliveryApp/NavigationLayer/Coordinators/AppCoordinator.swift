@@ -38,7 +38,7 @@ private extension AppCoordinator {
         
     }
     func showMainFlow() {
-        guard let navigationController = navigationController else { return }
+        guard navigationController != nil else { return }
         let tabBarController = factory.makeMainFlow(coordinator: self, finishDelegate: self)
         self.tabBarController = tabBarController
         let transition = CATransition()

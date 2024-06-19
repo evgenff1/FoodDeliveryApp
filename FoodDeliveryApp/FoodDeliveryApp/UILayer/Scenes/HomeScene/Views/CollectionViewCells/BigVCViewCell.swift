@@ -38,7 +38,7 @@ class BigVCViewCell: UICollectionViewCell {
         topView.layer.masksToBounds = true
 
         NSLayoutConstraint.activate([
-            topView.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+            topView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             topView.topAnchor.constraint(equalTo: contentView.topAnchor)
         ])
     }
@@ -54,7 +54,7 @@ class BigVCViewCell: UICollectionViewCell {
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: topView.topAnchor, constant: 10),
-            titleLabel.leftAnchor.constraint(equalTo: topView.leftAnchor, constant: 15)
+            titleLabel.leadingAnchor.constraint(equalTo: topView.leadingAnchor, constant: 15)
         ])
     }
 }

@@ -110,6 +110,6 @@ private extension FDBottomView {
 }
 
 
-#Preview("BottomView", traits: .fixedLayout(width: 400, height: 150)) {
-    FDBottomView()
-}
+//#Preview("BottomView", traits: .fixedLayout(width: 400, height: 150)) {
+//    FDBottomView()
+//}
