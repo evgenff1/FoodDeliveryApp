@@ -10,6 +10,8 @@
 		2785F4602C20136F00CDFFE9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F45F2C20136F00CDFFE9 /* LoginCoordinator.swift */; };
 		2785F4662C2185CE00CDFFE9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F4652C2185CE00CDFFE9 /* HomeViewController.swift */; };
 		2785F4692C2198D200CDFFE9 /* SmallHCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F4682C2198D200CDFFE9 /* SmallHCViewCell.swift */; };
+		2785F46B2C22BAB800CDFFE9 /* BigHCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F46A2C22BAB800CDFFE9 /* BigHCViewCell.swift */; };
+		2785F46D2C22CEBE00CDFFE9 /* BigVCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F46C2C22CEBE00CDFFE9 /* BigVCViewCell.swift */; };
 		27BFD96C2C12F0EB00A207E1 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27BFD95F2C12F0EB00A207E1 /* Roboto-Medium.ttf */; };
 		27BFD96D2C12F0EB00A207E1 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27BFD9602C12F0EB00A207E1 /* Roboto-Light.ttf */; };
 		27BFD96E2C12F0EB00A207E1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27BFD9612C12F0EB00A207E1 /* Roboto-Regular.ttf */; };
@@ -55,6 +57,8 @@
 		2785F45F2C20136F00CDFFE9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		2785F4652C2185CE00CDFFE9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2785F4682C2198D200CDFFE9 /* SmallHCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallHCViewCell.swift; sourceTree = "<group>"; };
+		2785F46A2C22BAB800CDFFE9 /* BigHCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigHCViewCell.swift; sourceTree = "<group>"; };
+		2785F46C2C22CEBE00CDFFE9 /* BigVCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigVCViewCell.swift; sourceTree = "<group>"; };
 		27BFD95F2C12F0EB00A207E1 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		27BFD9602C12F0EB00A207E1 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		27BFD9612C12F0EB00A207E1 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				2785F4682C2198D200CDFFE9 /* SmallHCViewCell.swift */,
+				2785F46A2C22BAB800CDFFE9 /* BigHCViewCell.swift */,
+				2785F46C2C22CEBE00CDFFE9 /* BigVCViewCell.swift */,
 			);
 			path = CollectionViewCells;
 			sourceTree = "<group>";
@@ -444,6 +450,7 @@
 			files = (
 				27BFD9B22C1CA2F000A207E1 /* LoginPresenter.swift in Sources */,
 				27DC8E342C0A1F24008F5B76 /* ViewController.swift in Sources */,
+				2785F46B2C22BAB800CDFFE9 /* BigHCViewCell.swift in Sources */,
 				27DC8E302C0A1F24008F5B76 /* AppDelegate.swift in Sources */,
 				27BFD97B2C12F2FA00A207E1 /* UIFont+Extension.swift in Sources */,
 				27BFD97F2C13196A00A207E1 /* AppColors.swift in Sources */,
@@ -467,6 +474,7 @@
 				27BFD9842C1430C100A207E1 /* Coordinator.swift in Sources */,
 				27BFD9A92C18AC3100A207E1 /* FDBottomView.swift in Sources */,
 				27BFD9AE2C1A0BA500A207E1 /* FDButton.swift in Sources */,
+				2785F46D2C22CEBE00CDFFE9 /* BigVCViewCell.swift in Sources */,
 				27BFD9982C14C52600A207E1 /* OnboardingViewPresenter.swift in Sources */,
 				27BFD97D2C13190900A207E1 /* UIColor+Extension.swift in Sources */,
 			);
