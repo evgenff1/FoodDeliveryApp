@@ -179,6 +179,7 @@ extension HomeViewController {
     func configureBigHCollectionTitle() {
         contentView.addSubview(bigHCollectionTitle)
         bigHCollectionTitle.translatesAutoresizingMaskIntoConstraints = false
+        bigHCollectionTitle.title.text = "Food Menu"
         
         NSLayoutConstraint.activate([
             bigHCollectionTitle.topAnchor.constraint(equalTo: smallHCollection.bottomAnchor, constant: 30),
@@ -190,11 +191,12 @@ extension HomeViewController {
     func setupBigHCollection() {
         contentView.addSubview(bigHCollection)
         
-        bigHCollection.backgroundColor = .red
+        bigHCollection.backgroundColor = .clear
         bigHCollection.translatesAutoresizingMaskIntoConstraints = false
         bigHCollection.delegate = self
         bigHCollection.dataSource = self
         bigHCollection.register(BigHCViewCell.self, forCellWithReuseIdentifier: "BigHCViewCell")
+        bigHCollection.showsHorizontalScrollIndicator = false
         
         NSLayoutConstraint.activate([
             bigHCollection.topAnchor.constraint(equalTo: bigHCollectionTitle.bottomAnchor, constant: 26),
@@ -254,7 +256,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case 1:
             return presenter.categoryData.count
         case 2:
-            return 15
+            return presenter.foodMenuData.count
         case 3:
             return 20
         default:
@@ -270,8 +272,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell?.configure(with: category)
             return cell ?? UICollectionViewCell()
         case 2:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BigHCViewCell", for: indexPath)
-            return cell
+            let item = presenter.foodMenuData[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BigHCViewCell", for: indexPath) as? BigHCViewCell
+            cell?.configure(with: item)
+            return cell ?? UICollectionViewCell()
         case 3:
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BigHCViewCell", for: indexPath)
             return cell

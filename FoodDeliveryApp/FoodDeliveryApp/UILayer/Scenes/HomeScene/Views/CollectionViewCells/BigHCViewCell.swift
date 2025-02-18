@@ -11,6 +11,7 @@ class BigHCViewCell: UICollectionViewCell {
 
     let topView = UIView()
     let titleLabel = UILabel()
+    let imageView = UIImageView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -21,9 +22,28 @@ class BigHCViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    func configure(with category: FoodMenuItem) {
+        titleLabel.text = category.rawValue
+        switch category {
+        case .burgers:
+            imageView.image = UIImage(resource: .burgers)
+        case .pizza:
+            imageView.image = UIImage(resource: .pizza)
+        case .bbq:
+            imageView.image = UIImage(resource: .bbq)
+        case .fruit:
+            imageView.image = UIImage(resource: .fruit)
+        case .sushi:
+            imageView.image = UIImage(resource: .sushi)
+        case .noodle:
+            imageView.image = UIImage(resource: .noodle)
+        case .none:
+            imageView.image = UIImage(resource: .noPictures)
+        }
+    }
 
     func setupCell() {
-        contentView.backgroundColor = .blue
+        contentView.backgroundColor = .clear
 
         setupTopView()
         setupBottomLabel()
@@ -33,7 +53,7 @@ class BigHCViewCell: UICollectionViewCell {
         contentView.addSubview(topView)
 
         topView.translatesAutoresizingMaskIntoConstraints = false
-        topView.backgroundColor = .green
+        topView.backgroundColor = .clear
         topView.layer.cornerRadius = 20
         topView.layer.masksToBounds = true
 
@@ -43,14 +63,26 @@ class BigHCViewCell: UICollectionViewCell {
             topView.widthAnchor.constraint(equalToConstant: 130),
             topView.heightAnchor.constraint(equalToConstant: 130)
         ])
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        
+        topView.addSubview(imageView)
+        
+        NSLayoutConstraint.activate([
+            imageView.centerXAnchor.constraint(equalTo: topView.centerXAnchor),
+            imageView.centerYAnchor.constraint(equalTo: topView.centerYAnchor),
+//            imageView.widthAnchor.constraint(equalToConstant: 30),
+//            imageView.heightAnchor.constraint(equalToConstant: 30)
+        ])
     }
 
     func setupBottomLabel() {
         contentView.addSubview(titleLabel)
 
-        titleLabel.font = .Roboto.regular.size(of: 14)
-        titleLabel.text = "Title label"
-        titleLabel.textColor = .black
+        titleLabel.font = .Roboto.bold.size(of: 14)
+        titleLabel.textColor = .white
 
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 

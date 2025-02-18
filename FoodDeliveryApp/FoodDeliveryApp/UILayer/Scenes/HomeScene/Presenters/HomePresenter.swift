@@ -9,7 +9,7 @@ import Foundation
 
 protocol HomePresenterProtocol: AnyObject {
     var categoryData: [FoodCategory] { get }
-//    var foodMenuData: [FoodMenuItem] { get }
+    var foodMenuData: [FoodMenuItem] { get }
 //    var restaurantData: [Restaurant] { get }
     func getSelectedCategory() -> FoodCategory
 }
@@ -19,11 +19,13 @@ class HomePresenter: HomePresenterProtocol {
     // MARK: - Properties
     let coordinator: HomeCoordinator
     var categoryData = [FoodCategory]()
+    var foodMenuData = [FoodMenuItem]()
 
     // MARK: - Initializers
     init(coordinator: HomeCoordinator) {
         self.coordinator = coordinator
         getCategoryData()
+        getFoodMenuData()
     }
 
     // MARK: - Methods
@@ -34,5 +36,10 @@ class HomePresenter: HomePresenterProtocol {
     private func getCategoryData() {
         // Mock data
         categoryData = [.drink, .food, .cake, .snack, .salad, .seafood]
+    }
+    
+    private func getFoodMenuData() {
+        // Mock data
+        foodMenuData = [.burgers, .fruit, .pizza, .sushi, .bbq, .noodle]
     }
 }
