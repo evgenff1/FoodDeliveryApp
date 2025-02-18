@@ -48,6 +48,8 @@
 		27BFD9AE2C1A0BA500A207E1 /* FDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD9AD2C1A0BA500A207E1 /* FDButton.swift */; };
 		27BFD9B02C1C88DA00A207E1 /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD9AF2C1C88DA00A207E1 /* FDTextField.swift */; };
 		27BFD9B22C1CA2F000A207E1 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD9B12C1CA2F000A207E1 /* LoginPresenter.swift */; };
+		27D38B382D6359BB00A96BA5 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38B372D6359BB00A96BA5 /* FoodCategory.swift */; };
+		27D38B3B2D635A1D00A96BA5 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38B3A2D635A1D00A96BA5 /* HomePresenter.swift */; };
 		27DC8E302C0A1F24008F5B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E2F2C0A1F24008F5B76 /* AppDelegate.swift */; };
 		27DC8E322C0A1F24008F5B76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E312C0A1F24008F5B76 /* SceneDelegate.swift */; };
 		27DC8E342C0A1F24008F5B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E332C0A1F24008F5B76 /* ViewController.swift */; };
@@ -97,6 +99,8 @@
 		27BFD9AD2C1A0BA500A207E1 /* FDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDButton.swift; sourceTree = "<group>"; };
 		27BFD9AF2C1C88DA00A207E1 /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
 		27BFD9B12C1CA2F000A207E1 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		27D38B372D6359BB00A96BA5 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
+		27D38B3A2D635A1D00A96BA5 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		27DC8E2C2C0A1F24008F5B76 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DC8E2F2C0A1F24008F5B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27DC8E312C0A1F24008F5B76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -120,9 +124,10 @@
 		2785F4612C21853D00CDFFE9 /* HomeScene */ = {
 			isa = PBXGroup;
 			children = (
+				2785F4622C21855100CDFFE9 /* Presenters */,
+				27D38B362D6359A900A96BA5 /* Models */,
 				2785F4642C21858900CDFFE9 /* Views */,
 				2785F4632C21856D00CDFFE9 /* Controllers */,
-				2785F4622C21855100CDFFE9 /* Presenters */,
 			);
 			path = HomeScene;
 			sourceTree = "<group>";
@@ -130,6 +135,7 @@
 		2785F4622C21855100CDFFE9 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				27D38B3A2D635A1D00A96BA5 /* HomePresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -338,6 +344,14 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		27D38B362D6359A900A96BA5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27D38B372D6359BB00A96BA5 /* FoodCategory.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		27DC8E232C0A1F24008F5B76 = {
 			isa = PBXGroup;
 			children = (
@@ -482,7 +496,9 @@
 				27BFD9A92C18AC3100A207E1 /* FDBottomView.swift in Sources */,
 				27BFD9AE2C1A0BA500A207E1 /* FDButton.swift in Sources */,
 				2785F46D2C22CEBE00CDFFE9 /* BigVCViewCell.swift in Sources */,
+				27D38B3B2D635A1D00A96BA5 /* HomePresenter.swift in Sources */,
 				27BFD9982C14C52600A207E1 /* OnboardingViewPresenter.swift in Sources */,
+				27D38B382D6359BB00A96BA5 /* FoodCategory.swift in Sources */,
 				2785F4712C231F9800CDFFE9 /* FDCollectionTitle.swift in Sources */,
 				27BFD97D2C13190900A207E1 /* UIColor+Extension.swift in Sources */,
 			);
