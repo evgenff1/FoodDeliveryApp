@@ -9,9 +9,9 @@ import UIKit
 
 class BigHCViewCell: UICollectionViewCell {
 
-    let topView = UIView()
-    let titleLabel = UILabel()
-    let imageView = UIImageView()
+    private let topView = UIView()
+    private let titleLabel = UILabel()
+    private let imageView = UIImageView()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,14 +42,14 @@ class BigHCViewCell: UICollectionViewCell {
         }
     }
 
-    func setupCell() {
+    private func setupCell() {
         contentView.backgroundColor = .clear
 
         setupTopView()
         setupBottomLabel()
     }
 
-    func setupTopView() {
+    private func setupTopView() {
         contentView.addSubview(topView)
 
         topView.translatesAutoresizingMaskIntoConstraints = false
@@ -73,12 +73,10 @@ class BigHCViewCell: UICollectionViewCell {
         NSLayoutConstraint.activate([
             imageView.centerXAnchor.constraint(equalTo: topView.centerXAnchor),
             imageView.centerYAnchor.constraint(equalTo: topView.centerYAnchor),
-//            imageView.widthAnchor.constraint(equalToConstant: 30),
-//            imageView.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 
-    func setupBottomLabel() {
+    private func setupBottomLabel() {
         contentView.addSubview(titleLabel)
 
         titleLabel.font = .Roboto.bold.size(of: 14)

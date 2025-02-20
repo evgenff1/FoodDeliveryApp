@@ -71,7 +71,7 @@ class HomeViewController: UIViewController {
 }
 
 // MARK: - Layout
-extension HomeViewController {
+private extension HomeViewController {
     func setupLayout() {
         setupView()
         configureScrollView()
@@ -85,8 +85,6 @@ extension HomeViewController {
         setupBigHCollection()
         configureBigVCollectionTitle()
         setupBigVCollection()
-        // TODO: - Only for mock data
-        calculateContentSize()
     }
     func setupView() {
         view.backgroundColor = .white
@@ -208,6 +206,7 @@ extension HomeViewController {
     func configureBigVCollectionTitle() {
         contentView.addSubview(bigVCollectionTitle)
         bigVCollectionTitle.translatesAutoresizingMaskIntoConstraints = false
+        bigVCollectionTitle.title.text = "Near Me"
         
         NSLayoutConstraint.activate([
             bigVCollectionTitle.topAnchor.constraint(equalTo: bigHCollection.bottomAnchor, constant: 20),
@@ -219,33 +218,21 @@ extension HomeViewController {
     func setupBigVCollection() {
         contentView.addSubview(bigVCollection)
         
-        bigVCollection.backgroundColor = .red
+        bigVCollection.backgroundColor = .clear
         bigVCollection.translatesAutoresizingMaskIntoConstraints = false
         bigVCollection.delegate = self
         bigVCollection.dataSource = self
-        bigVCollection.register(BigHCViewCell.self, forCellWithReuseIdentifier: "BigHCViewCell")
+        bigVCollection.register(BigVCViewCell.self, forCellWithReuseIdentifier: "BigVCViewCell")
         
         NSLayoutConstraint.activate([
             bigVCollection.topAnchor.constraint(equalTo: bigVCollectionTitle.bottomAnchor, constant: 26),
             bigVCollection.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 30),
             bigVCollection.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -30),
-            bigVCollection.heightAnchor.constraint(equalToConstant: 1000),
+            bigVCollection.heightAnchor.constraint(equalToConstant: 750),
             bigVCollection.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
-    func calculateContentSize() {
-        var totalHeight: CGFloat = 300 + 50 + 50 + 22 + 22 + 30 + 30 + 30 + 30 + smallHCollection.bounds.height + bigHCollection.bounds.height
-        
-        for index in 0..<bigVCollection.numberOfItems(inSection: 0) {
-            let indexPath = IndexPath(item: index, section: 0)
-            let cellHeight = collectionView(bigVCollection, layout: bigVCollection.collectionViewLayout, sizeForItemAt: indexPath).height
-            totalHeight += cellHeight
-        }
-        
-        let spacing = CGFloat(bigVCollection.numberOfItems(inSection: 0) - 1) * 30
-        
-        contentView.heightAnchor.constraint(equalToConstant: totalHeight + spacing).isActive = true
-    }
+
 }
 
 // MARK: - CollectionView delegate
@@ -258,7 +245,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         case 2:
             return presenter.foodMenuData.count
         case 3:
-            return 20
+            return presenter.restaurantData.count
         default:
             return 0
         }
@@ -277,8 +264,10 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             cell?.configure(with: item)
             return cell ?? UICollectionViewCell()
         case 3:
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BigHCViewCell", for: indexPath)
-            return cell
+            let restaurant = presenter.restaurantData[indexPath.row]
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BigVCViewCell", for: indexPath) as? BigVCViewCell
+            cell?.configure(with: restaurant)
+            return cell ?? UICollectionViewCell()
         default:
             return UICollectionViewCell()
         }

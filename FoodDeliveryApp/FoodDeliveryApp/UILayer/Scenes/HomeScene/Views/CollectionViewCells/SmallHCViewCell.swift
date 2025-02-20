@@ -9,10 +9,10 @@ import UIKit
 
 class SmallHCViewCell: UICollectionViewCell {
 
-    let topView = UIView()
-    let bottomLabel = UILabel()
-    let imageView = UIImageView()
-    var isCategorySelected = false
+    private let topView = UIView()
+    private let bottomLabel = UILabel()
+    private let imageView = UIImageView()
+    private var isCategorySelected = false
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,14 +54,14 @@ class SmallHCViewCell: UICollectionViewCell {
         isCategorySelected.toggle()
     }
 
-    func setupCell() {
+    private func setupCell() {
         contentView.backgroundColor = .clear
         
         setupTopView()
         setupBottomLabel()
     }
 
-    func setupTopView() {
+    private func setupTopView() {
         contentView.addSubview(topView)
 
         topView.translatesAutoresizingMaskIntoConstraints = false
@@ -90,7 +90,7 @@ class SmallHCViewCell: UICollectionViewCell {
         ])
     }
 
-    func setupBottomLabel() {
+    private func setupBottomLabel() {
         contentView.addSubview(bottomLabel)
 
         bottomLabel.font = .Roboto.regular.size(of: 14)
