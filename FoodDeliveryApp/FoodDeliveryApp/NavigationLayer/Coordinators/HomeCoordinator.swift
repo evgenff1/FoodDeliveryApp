@@ -28,4 +28,9 @@ extension HomeCoordinator {
         let vc = factory.makeHomeScene(coordinator: self)
         navigationController.pushViewController(vc, animated: true)
     }
+    
+    func showListScreen(for category: String, with restaurants: [Restaurant]) {
+        let listVC = RestaurantsListViewController(title: category, restaurants: restaurants)
+        navigationController?.pushViewController(listVC, animated: true)
+    }
 }

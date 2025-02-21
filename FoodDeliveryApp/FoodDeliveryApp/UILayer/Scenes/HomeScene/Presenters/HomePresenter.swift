@@ -11,13 +11,14 @@ protocol HomePresenterProtocol: AnyObject {
     var categoryData: [FoodCategory] { get }
     var foodMenuData: [FoodMenuItem] { get }
     var restaurantData: [Restaurant] { get }
+    var coordinator: HomeCoordinator { get }
     func getSelectedCategory() -> FoodCategory
 }
 
 class HomePresenter: HomePresenterProtocol {
 
     // MARK: - Properties
-    private let coordinator: HomeCoordinator
+    let coordinator: HomeCoordinator
     var categoryData = [FoodCategory]()
     var foodMenuData = [FoodMenuItem]()
     var restaurantData = [Restaurant]()

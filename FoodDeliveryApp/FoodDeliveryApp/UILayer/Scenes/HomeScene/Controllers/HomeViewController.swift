@@ -67,6 +67,16 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupLayout()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
 
 }
 
@@ -88,7 +98,6 @@ private extension HomeViewController {
     }
     func setupView() {
         view.backgroundColor = .white
-        navigationController?.navigationBar.isHidden = true
     }
     func configureScrollView() {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
@@ -279,7 +288,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let cell = collectionView.cellForItem(at: indexPath) as? SmallHCViewCell
             cell?.toggleSelection()
         case 2:
-            print()
+            let item = presenter.foodMenuData[indexPath.row]
+            presenter.coordinator.showListScreen(for: item.rawValue, with: presenter.restaurantData)
         case 3:
             print()
         default:
