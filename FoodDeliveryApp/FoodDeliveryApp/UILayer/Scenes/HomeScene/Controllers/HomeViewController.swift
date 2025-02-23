@@ -291,7 +291,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
             let item = presenter.foodMenuData[indexPath.row]
             presenter.coordinator.showListScreen(for: item.rawValue, with: presenter.restaurantData)
         case 3:
-            print()
+            let restaurant = presenter.restaurantData[indexPath.row]
+            presenter.coordinator.showFoodMenuScreen(for: restaurant, foodItems: presenter.foodItems)
         default:
             print()
         }

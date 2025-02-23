@@ -30,7 +30,18 @@ extension HomeCoordinator {
     }
     
     func showListScreen(for category: String, with restaurants: [Restaurant]) {
-        let listVC = RestaurantsListViewController(title: category, restaurants: restaurants)
+        let presenter = HomePresenter(coordinator: self)
+        let listVC = RestaurantsListViewController(
+            title: category,
+            restaurants: restaurants,
+            presenter: presenter,
+            coordinator: self
+        )
         navigationController?.pushViewController(listVC, animated: true)
+    }
+    
+    func showFoodMenuScreen(for restaurant: Restaurant, foodItems: [FoodItem]) {
+        let foodMenuVC = FoodMenuViewController(restaurant: restaurant, foodItems: foodItems)
+        navigationController?.pushViewController(foodMenuVC, animated: true)
     }
 }

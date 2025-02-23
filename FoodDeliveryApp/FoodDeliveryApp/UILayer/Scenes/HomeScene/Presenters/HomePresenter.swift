@@ -12,6 +12,7 @@ protocol HomePresenterProtocol: AnyObject {
     var foodMenuData: [FoodMenuItem] { get }
     var restaurantData: [Restaurant] { get }
     var coordinator: HomeCoordinator { get }
+    var foodItems: [FoodItem] { get }
     func getSelectedCategory() -> FoodCategory
 }
 
@@ -22,6 +23,7 @@ class HomePresenter: HomePresenterProtocol {
     var categoryData = [FoodCategory]()
     var foodMenuData = [FoodMenuItem]()
     var restaurantData = [Restaurant]()
+    var foodItems = [FoodItem]()
 
     // MARK: - Initializers
     init(coordinator: HomeCoordinator) {
@@ -29,6 +31,7 @@ class HomePresenter: HomePresenterProtocol {
         getCategoryData()
         getFoodMenuData()
         getRestaurantData()
+        getFoodItems()
     }
 
     // MARK: - Methods
@@ -53,6 +56,17 @@ class HomePresenter: HomePresenterProtocol {
             Restaurant(name: "Dapur Ijah Restaurant", address: "13th Street, 46 W 12th St, NY", distance: "1.1 km", time: "3 min", imageName: "restaurant"),
             Restaurant(name: "Dapur Ijah Restaurant", address: "13th Street, 46 W 12th St, NY", distance: "1.1 km", time: "3 min", imageName: "restaurant"),
             Restaurant(name: "Dapur Ijah Restaurant", address: "13th Street, 46 W 12th St, NY", distance: "1.1 km", time: "3 min", imageName: "restaurant"),
+        ]
+    }
+    
+    private func getFoodItems() {
+        foodItems = [
+            FoodItem(name: "Dogmie jagong tutung", imageName: "restaurant", price: "$99.99", likes: 999, dislikes: 93),
+            FoodItem(name: "Dogmie jagong tutung", imageName: "restaurant", price: "$99.99", likes: 999, dislikes: 93),
+            FoodItem(name: "Dogmie jagong tutung", imageName: "restaurant", price: "$99.99", likes: 999, dislikes: 93),
+            FoodItem(name: "Dogmie jagong tutung", imageName: "restaurant", price: "$99.99", likes: 999, dislikes: 93),
+            FoodItem(name: "Dogmie jagong tutung", imageName: "restaurant", price: "$99.99", likes: 999, dislikes: 93),
+            FoodItem(name: "Dogmie jagong tutung", imageName: "restaurant", price: "$99.99", likes: 999, dislikes: 93),
         ]
     }
 }

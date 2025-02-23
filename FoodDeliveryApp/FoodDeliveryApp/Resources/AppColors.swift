@@ -15,4 +15,5 @@ enum AppColors {
     static let background = UIColor().hex(0xE5E5E5)
     static let bottomViewGrey = UIColor().hex(0x34495E)
     static let starsYellow = UIColor().hex(0xFFC107)
+    static let priceGreen = UIColor().hex(0x2ECC71)
 }

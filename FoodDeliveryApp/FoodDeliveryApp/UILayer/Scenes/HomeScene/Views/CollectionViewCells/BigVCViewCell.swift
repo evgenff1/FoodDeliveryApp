@@ -12,7 +12,7 @@ class BigVCViewCell: UICollectionViewCell {
     // MARK: - UI Elements
     private let restaurantImageView = UIImageView()
     private let nameLabel = UILabel()
-    private let addressIcon = UIImageView(image: UIImage(resource: .geoMark))
+    private let addressIcon = UIImageView(image: UIImage(resource: .geoMarkGray))
     private let addressLabel = UILabel()
     private let timeIcon = UIImageView(image: UIImage(resource: .clock))
     private let timeLabel = UILabel()
@@ -31,10 +31,6 @@ class BigVCViewCell: UICollectionViewCell {
     private func setupCell() {
         contentView.backgroundColor = .white
         contentView.layer.cornerRadius = 20
-        contentView.layer.shadowColor = UIColor.black.cgColor
-        contentView.layer.shadowOpacity = 0.1
-        contentView.layer.shadowOffset = CGSize(width: 0, height: 2)
-        contentView.layer.shadowRadius = 4
         
         setupImageView()
         setupInfoStack()
@@ -62,18 +58,20 @@ class BigVCViewCell: UICollectionViewCell {
         nameLabel.numberOfLines = 1
         
         addressLabel.font = .Roboto.regular.size(of: 12)
-        addressLabel.textColor = .gray
+        addressLabel.textColor = AppColors.bottomViewGrey
         addressLabel.numberOfLines = 1
         
         timeLabel.font = .Roboto.regular.size(of: 12)
-        timeLabel.textColor = .gray
+        timeLabel.textColor = AppColors.bottomViewGrey
         timeLabel.numberOfLines = 1
         
         addressIcon.contentMode = .scaleAspectFit
         addressIcon.translatesAutoresizingMaskIntoConstraints = false
+        addressIcon.tintColor = AppColors.bottomViewGrey
 
         timeIcon.contentMode = .scaleAspectFit
         timeIcon.translatesAutoresizingMaskIntoConstraints = false
+        timeIcon.tintColor = AppColors.bottomViewGrey
 
         NSLayoutConstraint.activate([
             addressIcon.widthAnchor.constraint(equalToConstant: 12),
@@ -140,6 +138,3 @@ class BigVCViewCell: UICollectionViewCell {
         timeLabel.text = "\(restaurant.time) - \(restaurant.distance)"
     }
 }
-
-
-
