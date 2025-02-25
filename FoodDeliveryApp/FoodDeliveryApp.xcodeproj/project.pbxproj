@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		2785F4602C20136F00CDFFE9 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F45F2C20136F00CDFFE9 /* LoginCoordinator.swift */; };
+		2785F4662C2185CE00CDFFE9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F4652C2185CE00CDFFE9 /* HomeViewController.swift */; };
+		2785F4692C2198D200CDFFE9 /* SmallHCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F4682C2198D200CDFFE9 /* SmallHCViewCell.swift */; };
+		2785F46B2C22BAB800CDFFE9 /* BigHCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F46A2C22BAB800CDFFE9 /* BigHCViewCell.swift */; };
+		2785F46D2C22CEBE00CDFFE9 /* BigVCViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F46C2C22CEBE00CDFFE9 /* BigVCViewCell.swift */; };
+		2785F46F2C22F3F300CDFFE9 /* FDSearchField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F46E2C22F3F300CDFFE9 /* FDSearchField.swift */; };
+		2785F4712C231F9800CDFFE9 /* FDCollectionTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2785F4702C231F9800CDFFE9 /* FDCollectionTitle.swift */; };
 		27BFD96C2C12F0EB00A207E1 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27BFD95F2C12F0EB00A207E1 /* Roboto-Medium.ttf */; };
 		27BFD96D2C12F0EB00A207E1 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27BFD9602C12F0EB00A207E1 /* Roboto-Light.ttf */; };
 		27BFD96E2C12F0EB00A207E1 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27BFD9612C12F0EB00A207E1 /* Roboto-Regular.ttf */; };
@@ -42,6 +48,15 @@
 		27BFD9AE2C1A0BA500A207E1 /* FDButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD9AD2C1A0BA500A207E1 /* FDButton.swift */; };
 		27BFD9B02C1C88DA00A207E1 /* FDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD9AF2C1C88DA00A207E1 /* FDTextField.swift */; };
 		27BFD9B22C1CA2F000A207E1 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFD9B12C1CA2F000A207E1 /* LoginPresenter.swift */; };
+		27D38B382D6359BB00A96BA5 /* FoodCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38B372D6359BB00A96BA5 /* FoodCategory.swift */; };
+		27D38B3B2D635A1D00A96BA5 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38B3A2D635A1D00A96BA5 /* HomePresenter.swift */; };
+		27D38B3D2D64A19E00A96BA5 /* FoodMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38B3C2D64A19E00A96BA5 /* FoodMenuItem.swift */; };
+		27D38B3F2D64E3AB00A96BA5 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38B3E2D64E3AB00A96BA5 /* Restaurant.swift */; };
+		27D38B452D67DCF100A96BA5 /* RestaurantsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38B442D67DCF100A96BA5 /* RestaurantsListViewController.swift */; };
+		27D38B472D68F30800A96BA5 /* FoodItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38B462D68F30800A96BA5 /* FoodItem.swift */; };
+		27D38B492D68F47600A96BA5 /* FoodMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38B482D68F47600A96BA5 /* FoodMenuViewController.swift */; };
+		27D38B4B2D68F4BA00A96BA5 /* FoodMenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38B4A2D68F4BA00A96BA5 /* FoodMenuItemCell.swift */; };
+		27D38B4D2D6B8E2F00A96BA5 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D38B4C2D6B8E2F00A96BA5 /* FoodDetailViewController.swift */; };
 		27DC8E302C0A1F24008F5B76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E2F2C0A1F24008F5B76 /* AppDelegate.swift */; };
 		27DC8E322C0A1F24008F5B76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E312C0A1F24008F5B76 /* SceneDelegate.swift */; };
 		27DC8E342C0A1F24008F5B76 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DC8E332C0A1F24008F5B76 /* ViewController.swift */; };
@@ -51,6 +66,12 @@
 
 /* Begin PBXFileReference section */
 		2785F45F2C20136F00CDFFE9 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		2785F4652C2185CE00CDFFE9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2785F4682C2198D200CDFFE9 /* SmallHCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallHCViewCell.swift; sourceTree = "<group>"; };
+		2785F46A2C22BAB800CDFFE9 /* BigHCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigHCViewCell.swift; sourceTree = "<group>"; };
+		2785F46C2C22CEBE00CDFFE9 /* BigVCViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigVCViewCell.swift; sourceTree = "<group>"; };
+		2785F46E2C22F3F300CDFFE9 /* FDSearchField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDSearchField.swift; sourceTree = "<group>"; };
+		2785F4702C231F9800CDFFE9 /* FDCollectionTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDCollectionTitle.swift; sourceTree = "<group>"; };
 		27BFD95F2C12F0EB00A207E1 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
 		27BFD9602C12F0EB00A207E1 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		27BFD9612C12F0EB00A207E1 /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
@@ -85,6 +106,15 @@
 		27BFD9AD2C1A0BA500A207E1 /* FDButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDButton.swift; sourceTree = "<group>"; };
 		27BFD9AF2C1C88DA00A207E1 /* FDTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FDTextField.swift; sourceTree = "<group>"; };
 		27BFD9B12C1CA2F000A207E1 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		27D38B372D6359BB00A96BA5 /* FoodCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCategory.swift; sourceTree = "<group>"; };
+		27D38B3A2D635A1D00A96BA5 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		27D38B3C2D64A19E00A96BA5 /* FoodMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMenuItem.swift; sourceTree = "<group>"; };
+		27D38B3E2D64E3AB00A96BA5 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		27D38B442D67DCF100A96BA5 /* RestaurantsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantsListViewController.swift; sourceTree = "<group>"; };
+		27D38B462D68F30800A96BA5 /* FoodItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItem.swift; sourceTree = "<group>"; };
+		27D38B482D68F47600A96BA5 /* FoodMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMenuViewController.swift; sourceTree = "<group>"; };
+		27D38B4A2D68F4BA00A96BA5 /* FoodMenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodMenuItemCell.swift; sourceTree = "<group>"; };
+		27D38B4C2D6B8E2F00A96BA5 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
 		27DC8E2C2C0A1F24008F5B76 /* FoodDeliveryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodDeliveryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DC8E2F2C0A1F24008F5B76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27DC8E312C0A1F24008F5B76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +135,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2785F4612C21853D00CDFFE9 /* HomeScene */ = {
+			isa = PBXGroup;
+			children = (
+				2785F4622C21855100CDFFE9 /* Presenters */,
+				27D38B362D6359A900A96BA5 /* Models */,
+				2785F4642C21858900CDFFE9 /* Views */,
+				2785F4632C21856D00CDFFE9 /* Controllers */,
+			);
+			path = HomeScene;
+			sourceTree = "<group>";
+		};
+		2785F4622C21855100CDFFE9 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				27D38B3A2D635A1D00A96BA5 /* HomePresenter.swift */,
+			);
+			path = Presenters;
+			sourceTree = "<group>";
+		};
+		2785F4632C21856D00CDFFE9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2785F4652C2185CE00CDFFE9 /* HomeViewController.swift */,
+				27D38B442D67DCF100A96BA5 /* RestaurantsListViewController.swift */,
+				27D38B482D68F47600A96BA5 /* FoodMenuViewController.swift */,
+				27D38B4C2D6B8E2F00A96BA5 /* FoodDetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2785F4642C21858900CDFFE9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2785F4672C21989000CDFFE9 /* CollectionViewCells */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2785F4672C21989000CDFFE9 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				2785F4682C2198D200CDFFE9 /* SmallHCViewCell.swift */,
+				2785F46A2C22BAB800CDFFE9 /* BigHCViewCell.swift */,
+				2785F46C2C22CEBE00CDFFE9 /* BigVCViewCell.swift */,
+				27D38B4A2D68F4BA00A96BA5 /* FoodMenuItemCell.swift */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		27BFD95C2C1237CE00A207E1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,6 +338,8 @@
 			children = (
 				27BFD9AD2C1A0BA500A207E1 /* FDButton.swift */,
 				27BFD9AF2C1C88DA00A207E1 /* FDTextField.swift */,
+				2785F46E2C22F3F300CDFFE9 /* FDSearchField.swift */,
+				2785F4702C231F9800CDFFE9 /* FDCollectionTitle.swift */,
 			);
 			path = Veiws;
 			sourceTree = "<group>";
@@ -274,10 +355,22 @@
 		27BFD9AC2C1A0AD000A207E1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2785F4612C21853D00CDFFE9 /* HomeScene */,
 				27BFD9A22C18AA9E00A207E1 /* AuthScene */,
 				27BFD9942C14C40E00A207E1 /* OnboardingScene */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		27D38B362D6359A900A96BA5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27D38B372D6359BB00A96BA5 /* FoodCategory.swift */,
+				27D38B3C2D64A19E00A96BA5 /* FoodMenuItem.swift */,
+				27D38B3E2D64E3AB00A96BA5 /* Restaurant.swift */,
+				27D38B462D68F30800A96BA5 /* FoodItem.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		27DC8E232C0A1F24008F5B76 = {
@@ -397,7 +490,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				27BFD9B22C1CA2F000A207E1 /* LoginPresenter.swift in Sources */,
+				27D38B472D68F30800A96BA5 /* FoodItem.swift in Sources */,
 				27DC8E342C0A1F24008F5B76 /* ViewController.swift in Sources */,
+				27D38B4D2D6B8E2F00A96BA5 /* FoodDetailViewController.swift in Sources */,
+				2785F46B2C22BAB800CDFFE9 /* BigHCViewCell.swift in Sources */,
 				27DC8E302C0A1F24008F5B76 /* AppDelegate.swift in Sources */,
 				27BFD97B2C12F2FA00A207E1 /* UIFont+Extension.swift in Sources */,
 				27BFD97F2C13196A00A207E1 /* AppColors.swift in Sources */,
@@ -405,10 +501,17 @@
 				27BFD9862C14357B00A207E1 /* AppCoordinator.swift in Sources */,
 				27BFD98C2C14541F00A207E1 /* OrderCoordinator.swift in Sources */,
 				27BFD9B02C1C88DA00A207E1 /* FDTextField.swift in Sources */,
+				27D38B3F2D64E3AB00A96BA5 /* Restaurant.swift in Sources */,
 				27BFD9962C14C4D200A207E1 /* OnboardingViewController.swift in Sources */,
+				27D38B4B2D68F4BA00A96BA5 /* FoodMenuItemCell.swift in Sources */,
+				27D38B3D2D64A19E00A96BA5 /* FoodMenuItem.swift in Sources */,
 				27BFD9A42C18AAFD00A207E1 /* LoginViewController.swift in Sources */,
+				27D38B452D67DCF100A96BA5 /* RestaurantsListViewController.swift in Sources */,
+				2785F4662C2185CE00CDFFE9 /* HomeViewController.swift in Sources */,
 				27DC8E322C0A1F24008F5B76 /* SceneDelegate.swift in Sources */,
+				2785F46F2C22F3F300CDFFE9 /* FDSearchField.swift in Sources */,
 				27BFD9902C1454D300A207E1 /* ProfileCoordinator.swift in Sources */,
+				2785F4692C2198D200CDFFE9 /* SmallHCViewCell.swift in Sources */,
 				27BFD98E2C14549400A207E1 /* ListCoordinator.swift in Sources */,
 				27BFD98A2C1453E700A207E1 /* HomeCoordinator.swift in Sources */,
 				27BFD9922C14806A00A207E1 /* TabBarController.swift in Sources */,
@@ -419,8 +522,13 @@
 				27BFD9842C1430C100A207E1 /* Coordinator.swift in Sources */,
 				27BFD9A92C18AC3100A207E1 /* FDBottomView.swift in Sources */,
 				27BFD9AE2C1A0BA500A207E1 /* FDButton.swift in Sources */,
+				2785F46D2C22CEBE00CDFFE9 /* BigVCViewCell.swift in Sources */,
+				27D38B3B2D635A1D00A96BA5 /* HomePresenter.swift in Sources */,
 				27BFD9982C14C52600A207E1 /* OnboardingViewPresenter.swift in Sources */,
+				27D38B382D6359BB00A96BA5 /* FoodCategory.swift in Sources */,
+				2785F4712C231F9800CDFFE9 /* FDCollectionTitle.swift in Sources */,
 				27BFD97D2C13190900A207E1 /* UIColor+Extension.swift in Sources */,
+				27D38B492D68F47600A96BA5 /* FoodMenuViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,7 +598,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -547,7 +655,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;

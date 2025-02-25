@@ -9,14 +9,44 @@ import UIKit
 
 class HomeCoordinator: Coordinator {
     
+    private let factory = SceneFactory.self
+    
     override func start() {
-        let vc = ViewController()
-        vc.view.backgroundColor = .red
-        navigationController?.pushViewController(vc, animated: true)
+        showHomeScene()
     }
     
     override func finish() {
         print("AppCoordinator finish")
     }
     
+}
+
+// MARK: - Navigation
+extension HomeCoordinator {
+    func showHomeScene() {
+        guard let navigationController = navigationController else { return }
+        let vc = factory.makeHomeScene(coordinator: self)
+        navigationController.pushViewController(vc, animated: true)
+    }
+    
+    func showListScreen(for category: String, with restaurants: [Restaurant]) {
+        let presenter = HomePresenter(coordinator: self)
+        let listVC = RestaurantsListViewController(
+            title: category,
+            restaurants: restaurants,
+            presenter: presenter,
+            coordinator: self
+        )
+        navigationController?.pushViewController(listVC, animated: true)
+    }
+    
+    func showFoodMenuScreen(for restaurant: Restaurant, foodItems: [FoodItem]) {
+        let foodMenuVC = FoodMenuViewController(restaurant: restaurant, foodItems: foodItems, coordinator: self)
+        navigationController?.pushViewController(foodMenuVC, animated: true)
+    }
+    
+    func showFoodDetailScreen(for foodItem: FoodItem) {
+        let foodDetailVC = FoodDetailViewController(foodItem: foodItem)
+        navigationController?.pushViewController(foodDetailVC, animated: true)
+    }
 }
