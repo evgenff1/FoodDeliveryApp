@@ -171,6 +171,7 @@ private extension LoginViewController {
     }
     func setupSignInPassword() {
         signInPassword.translatesAutoresizingMaskIntoConstraints = false
+        signInPassword.isSecureTextEntry = true
         signInPassword.placeholder = "Password"
         
         NSLayoutConstraint.activate([
@@ -295,6 +296,7 @@ private extension LoginViewController {
     }
     func setupSignUpPass() {
         signUpPassword.translatesAutoresizingMaskIntoConstraints = false
+        signUpPassword.isSecureTextEntry = true
         signUpPassword.placeholder = "Enter Password"
         
         NSLayoutConstraint.activate([
@@ -315,6 +317,7 @@ private extension LoginViewController {
     }
     func setupSignUpReEnterPass() {
         signUpReEnterPass.translatesAutoresizingMaskIntoConstraints = false
+        signUpReEnterPass.isSecureTextEntry = true
         signUpReEnterPass.placeholder = "Re-enter Password"
         
         NSLayoutConstraint.activate([

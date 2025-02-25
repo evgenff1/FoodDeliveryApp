@@ -47,7 +47,6 @@ class RestaurantsListViewController: UIViewController {
         
         navigationController?.navigationBar.topItem?.backButtonTitle = ""
     }
-    
 }
 
 // MARK: - UI Setup

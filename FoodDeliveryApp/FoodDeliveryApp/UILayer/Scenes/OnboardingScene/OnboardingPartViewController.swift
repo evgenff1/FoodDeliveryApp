@@ -10,7 +10,6 @@ import UIKit
 // MARK: - OnboardingPartViewController
 class OnboardingPartViewController: UIViewController {
 
-
     // MARK: - Properties
     var imageToShow: UIImage? {
         didSet {
@@ -29,21 +28,17 @@ class OnboardingPartViewController: UIViewController {
     }
     var buttonText: String?
     
-
     // MARK: - Views
     private let imageView = UIImageView()
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
     private let bottomButton = UIButton()
 
-
-
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
     }
-
 }
 
 // MARK: - Layout
@@ -90,7 +85,6 @@ private extension OnboardingPartViewController {
         
         NSLayoutConstraint.activate([
             descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 23),
-            descriptionLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             descriptionLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 71),
             descriptionLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -72)
         ])

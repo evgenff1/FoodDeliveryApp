@@ -9,6 +9,7 @@ import UIKit
 
 class FoodMenuItemCell: UICollectionViewCell {
     
+    // MARK: - UI Elements
     private let foodImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -87,6 +88,7 @@ class FoodMenuItemCell: UICollectionViewCell {
         return button
     }()
     
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -97,6 +99,7 @@ class FoodMenuItemCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Configuration
     func configure(with item: FoodItem) {
         foodImageView.image = UIImage(named: item.imageName)
         nameLabel.text = item.name
@@ -105,6 +108,7 @@ class FoodMenuItemCell: UICollectionViewCell {
         dislikesLabel.text = "\(item.dislikes)+"
     }
     
+    // MARK: - Setup
     private func setupUI() {
         contentView.layer.cornerRadius = 20
         contentView.backgroundColor = .white
@@ -159,6 +163,7 @@ class FoodMenuItemCell: UICollectionViewCell {
         ])
     }
     
+    // MARK: - Actions
     private func setupActions() {
         bigLikeButton.addTarget(self, action: #selector(didTapLike), for: .touchUpInside)
         bigDislikeButton.addTarget(self, action: #selector(didTapDislike), for: .touchUpInside)

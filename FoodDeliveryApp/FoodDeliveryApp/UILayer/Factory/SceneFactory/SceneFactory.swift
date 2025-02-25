@@ -123,6 +123,4 @@ struct SceneFactory {
         let controller = HomeViewController(presenter: presenter)
         return controller
     }
-
-
 }

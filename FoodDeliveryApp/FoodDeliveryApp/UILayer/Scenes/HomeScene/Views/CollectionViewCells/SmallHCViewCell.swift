@@ -9,11 +9,13 @@ import UIKit
 
 class SmallHCViewCell: UICollectionViewCell {
 
+    // MARK: - UI Elements
     private let topView = UIView()
     private let bottomLabel = UILabel()
     private let imageView = UIImageView()
     private var isCategorySelected = false
 
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCell()
@@ -23,6 +25,7 @@ class SmallHCViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Configuration
     func configure(with category: FoodCategory) {
         bottomLabel.text = category.rawValue
         switch category {
@@ -54,6 +57,7 @@ class SmallHCViewCell: UICollectionViewCell {
         isCategorySelected.toggle()
     }
 
+    // MARK: - Setup
     private func setupCell() {
         contentView.backgroundColor = .clear
         
