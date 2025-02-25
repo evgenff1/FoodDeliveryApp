@@ -41,7 +41,12 @@ extension HomeCoordinator {
     }
     
     func showFoodMenuScreen(for restaurant: Restaurant, foodItems: [FoodItem]) {
-        let foodMenuVC = FoodMenuViewController(restaurant: restaurant, foodItems: foodItems)
+        let foodMenuVC = FoodMenuViewController(restaurant: restaurant, foodItems: foodItems, coordinator: self)
         navigationController?.pushViewController(foodMenuVC, animated: true)
+    }
+    
+    func showFoodDetailScreen(for foodItem: FoodItem) {
+        let foodDetailVC = FoodDetailViewController(foodItem: foodItem)
+        navigationController?.pushViewController(foodDetailVC, animated: true)
     }
 }

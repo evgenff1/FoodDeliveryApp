@@ -11,4 +11,5 @@ struct FoodItem {
     let price: String
     let likes: Int
     let dislikes: Int
+    let description: String
 }

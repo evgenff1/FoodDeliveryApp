@@ -12,6 +12,7 @@ class FoodMenuViewController: UIViewController {
     // MARK: - Properties
     private let restaurant: Restaurant
     private let foodItems: [FoodItem]
+    private let coordinator: HomeCoordinator
     
     // MARK: - Views
     private let collectionView: UICollectionView = {
@@ -23,9 +24,10 @@ class FoodMenuViewController: UIViewController {
     }()
     
     // MARK: - Initializer
-    init(restaurant: Restaurant, foodItems: [FoodItem]) {
+    init(restaurant: Restaurant, foodItems: [FoodItem], coordinator: HomeCoordinator) {
         self.restaurant = restaurant
         self.foodItems = foodItems
+        self.coordinator = coordinator
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -96,6 +98,11 @@ extension FoodMenuViewController: UICollectionViewDelegate, UICollectionViewData
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FoodMenuItemCell", for: indexPath) as? FoodMenuItemCell
         cell?.configure(with: foodItems[indexPath.row])
         return cell ?? UICollectionViewCell()
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedFoodItem = foodItems[indexPath.row]
+        coordinator.showFoodDetailScreen(for: selectedFoodItem)
     }
 }
 
