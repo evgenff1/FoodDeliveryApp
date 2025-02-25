@@ -18,6 +18,7 @@ class BigVCViewCell: UICollectionViewCell {
     private let timeLabel = UILabel()
     private let starStackView = UIStackView()
     
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCell()
@@ -25,6 +26,14 @@ class BigVCViewCell: UICollectionViewCell {
 
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Configuration
+    func configure(with restaurant: Restaurant) {
+        restaurantImageView.image = UIImage(named: restaurant.imageName)
+        nameLabel.text = restaurant.name
+        addressLabel.text = restaurant.address
+        timeLabel.text = "\(restaurant.time) - \(restaurant.distance)"
     }
 
     // MARK: - Setup
@@ -128,13 +137,5 @@ class BigVCViewCell: UICollectionViewCell {
             starStackView.leadingAnchor.constraint(equalTo: restaurantImageView.trailingAnchor, constant: 20),
             starStackView.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -10)
         ])
-    }
-
-    // MARK: - Configuration
-    func configure(with restaurant: Restaurant) {
-        restaurantImageView.image = UIImage(named: restaurant.imageName)
-        nameLabel.text = restaurant.name
-        addressLabel.text = restaurant.address
-        timeLabel.text = "\(restaurant.time) - \(restaurant.distance)"
     }
 }

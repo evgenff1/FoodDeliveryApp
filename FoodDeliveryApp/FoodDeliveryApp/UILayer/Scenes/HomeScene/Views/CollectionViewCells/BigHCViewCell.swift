@@ -9,10 +9,12 @@ import UIKit
 
 class BigHCViewCell: UICollectionViewCell {
 
+    // MARK: - UI Elements
     private let topView = UIView()
     private let titleLabel = UILabel()
     private let imageView = UIImageView()
 
+    // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCell()
@@ -22,6 +24,7 @@ class BigHCViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Configuration
     func configure(with category: FoodMenuItem) {
         titleLabel.text = category.rawValue
         switch category {
@@ -42,6 +45,7 @@ class BigHCViewCell: UICollectionViewCell {
         }
     }
 
+    // MARK: - Setup
     private func setupCell() {
         contentView.backgroundColor = .clear
 
